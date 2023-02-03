@@ -5,9 +5,113 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="styles.css"></script>
+    <script src="src/script.js"></script>
     <title>Github login</title>
+    
+    <style>
+        .center {
+            margin: auto;
+            width: 300px;
+            border: none;
+        }
+        .form-mid {
+            border-style: solid;
+            border-color: whitesmoke;
+            border-radius: 5%;
+            border-width: 2px;
+        }
+        .img {
+            display: block;
+            width: 60px;
+            height: auto;
+           margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .git-heading {
+            padding: 20px;
+        }
+        input {
+            width: 90%;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .user-name {
+            padding-left: 10%;
+        }
+        .submit {
+            background-color: darkolivegreen;
+            color: white;
+        }
+        .p-info {
+            display: flex;
+            padding-left: 10%;
+            justify-content: space-between;
+           
+            
+        }
+        .input-info {
+            display: flex;
+            justify-content: space-around;
+            border-style: solid;
+            border-width: 2px;border-color: whitesmoke;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+
+        }
+        a {
+            text-decoration: none;
+        }
+        .footer-info {
+            display: flex;
+        }
+        .privacy {
+            color: cornflowerblue;
+        }
+        .contact {
+            color: black;
+        }
+       .nav {
+        justify-items: space-around;
+       }
+    </style>
 </head>
 <body>
+    <div class="center">
+        <img src="https://github.githubassets.com/pinned-octocat.svg" alt="githib logo" id="logo" class="img">
     
+            <h1 class="git-heading">Sign in to GitHub</h1>
+        <form id="form" name="validate" class="form-validate">
+            <main class="form-mid">
+                <label for="username" class="user-name">Username or email address</label>
+                <input type="text" id="user-name" class="user"> 
+                <div id="password-info" class="p-info">   
+                <label for="password">Password</label>
+                <label for="forgot password">Forget password</label>
+                </div>
+                <input type="password" id="password" class="password">
+                <input type="submit" id="button" value="Sign in" class="submit">
+            </main>
+            <div id="message"></div>
+        </form>
+            <section>
+                <div id="input-info" class="input-info">
+                    <p>New to GtiHub?</p>
+                    <p>Creae an account.</p>
+                </div>
+            </section>
+        
+            <footer id="nav" class="footer-info">
+                <div id="privacy" class="privacy">
+                    <a href="">Terms</a>
+                    <a href="">Privacy</a>
+                    <a href="">Security</a>
+                </div>    
+                <div id="contact" class="contact">
+                    <a href="">Contact GtiHub?</a>
+                </div>
+            </footer>
+    </div>
 </body>
 </html>
