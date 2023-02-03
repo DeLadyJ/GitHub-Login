@@ -62,19 +62,19 @@
         }
         a {
             text-decoration: none;
+            display: inline-flex;
+            justify-items: space-around;
         }
         .footer-info {
             display: flex;
         }
         .privacy {
-            color: cornflowerblue;
+            color: dodgerblue;
         }
         .contact {
             color: black;
         }
-       .nav {
-        justify-items: space-around;
-       }
+       
     </style>
 </head>
 <body>
@@ -93,7 +93,6 @@
                 <input type="password" id="password" class="password">
                 <input type="submit" id="button" value="Sign in" class="submit">
             </main>
-            <div id="message"></div>
         </form>
             <section>
                 <div id="input-info" class="input-info">
@@ -103,7 +102,7 @@
             </section>
         
             <footer id="nav" class="footer-info">
-                <div id="privacy" class="privacy">
+                <div id="privacy" class="">
                     <a href="">Terms</a>
                     <a href="">Privacy</a>
                     <a href="">Security</a>

@@ -1,6 +1,6 @@
 
 
- const formEl = document.querySelector('#form');
+ const LoginFormEl = document.querySelector('#form');
  const userNameEl = document.querySelector('#user-name');
  const passwordEl = document.querySelector('#password');
  const messageEl = document.querySelector('#message');
@@ -9,16 +9,12 @@
 // let password = document.getElementById('#password');
 // let message = document.getElementById('#message');
 
-loginForm.addEventListener('submit', function (e)  {
+LoginFormEl.addEventListener('submit', function (e)  {
     e.preventDefault();
 
-    // let userName = userName.value;
-    // let password = password.value;
-    // let message = message.value;
-
-    const userName = userName.value;
-    const password = password.value;
-    const message = message.value;
+    const userNameEl = userName.value;
+    const passwordEl = password.value;
+    const messageEl = message.value;
 
     if (userName.value == "" || password.value == "") {
         message.innerHTML = 
