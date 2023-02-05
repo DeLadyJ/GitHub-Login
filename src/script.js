@@ -1,45 +1,44 @@
 
 
- const LoginFormEl = document.querySelector('#form');
- const userNameEl = document.querySelector('#user-name');
- const passwordEl = document.querySelector('#password');
- const messageEl = document.querySelector('#message');
-//  let loginForm = document.getElementById("Form");
-// let userName = document.getElementById('#user-name');
-// let password = document.getElementById('#password');
-// let message = document.getElementById('#message');
+//  const LoginFormEl = document.querySelector('#form');
+//  const userNameEl = document.querySelector('#user-name');
+//  const passwordEl = document.querySelector('#password');
+//  const messageEl = document.querySelector('#message');
 
 const form = document.getElementById('form');
 const submit = document.getElementById('submit');
 const message = document.getElementById('message');
+const password = document.getElementById('password');
+const userName = document.getElementById('user-name');
 
 form.addEventListener('submit', function(e) {
-  
-    e.preventDefault();
+  e.preventDefault();
 
-    const userNameEl = document.getElementById('user-name');
-    const passwordEl = document.getElementById('password');
-    
-    if (userNameEl.value === "" ) {
-      console.log('userNameEl.value')
-      message.innerHTML =
-        `<span class="bg-red-500 text-red"><p>Input can not be empty.</p></span>
-   `
+  // const userName = userName.lenght ;
+  // const password = password.value ;
+
+    if (userName.value === "" || userName.value <= 3){
+      console.log('not good')
+    message.innerHTML =
+      `
+      <span class="text-red-200"><p>Input can't be least than 3 characters.</p></span>
+      `
     } else {
-      if (passwordEl.value === "") {
-        console.log('passwordEl.value')
-        message.innerHTML = 
-        `<span class="bg-red-400 text-white"><p>Password can not be empty.</p></span>
-        `
-      } else {
-        if (userNameEl.value >= 3 && passwordEl.value >= 6) {
-          console.log('userNameEl.value')
-          console.log('passwordEl.value')
-          message.innerHTML = 
-          `<span class="bg-green-200 text-white"><p>Success!.</p></span>
-          `
-        };
-      }
-
+      if (password.value === "" || password.value <= 5) {
+        console.log('try again')
+         message.innerHTML =
+           ` 
+           <span class="bg-red-400 text-white"><p>Password can't be empty or least than 6 characters.</p></span>
+           `
+  } else  {
+        if (userName.value > 3 && password.value >= 6) {
+          console.log('yayyy, tis good')
+      message.innerHTML =
+        ` 
+           <span class="text-green"><p>Succes!</p></span>
+           `
     }
-});
+  }
+  }
+  });
+
