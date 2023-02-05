@@ -9,29 +9,37 @@
 // let password = document.getElementById('#password');
 // let message = document.getElementById('#message');
 
-LoginFormEl.addEventListener('submit', function (e)  {
+const form = document.getElementById('form');
+const submit = document.getElementById('submit');
+const message = document.getElementById('message');
+
+form.addEventListener('submit', function(e) {
+  
     e.preventDefault();
 
-    const userNameEl = userName.value;
-    const passwordEl = password.value;
-    const messageEl = message.value;
-
-    if (userName.value == "" || password.value == "") {
-        message.innerHTML = 
-        `
-        <span class="bg-red-500 text-white"><p>Input can not be empty.</p></span>
-        `
+    const userNameEl = document.getElementById('user-name');
+    const passwordEl = document.getElementById('password');
+    
+    if (userNameEl.value === "" ) {
+      console.log('userNameEl.value')
+      message.innerHTML =
+        `<span class="bg-red-500 text-red"><p>Input can not be empty.</p></span>
+   `
     } else {
-        if (userName.value > 3 || password.value > 6)  {
-            message.innerHTML = 
+      if (passwordEl.value === "") {
+        console.log('passwordEl.value')
+        message.innerHTML = 
+        `<span class="bg-red-400 text-white"><p>Password can not be empty.</p></span>
         `
-        <span class="bg-green-500 text-white"><p>Form submitted.</p></span>
-        ` 
-        }
+      } else {
+        if (userNameEl.value >= 3 && passwordEl.value >= 6) {
+          console.log('userNameEl.value')
+          console.log('passwordEl.value')
+          message.innerHTML = 
+          `<span class="bg-green-200 text-white"><p>Success!.</p></span>
+          `
+        };
+      }
+
     }
 });
-
-
-
-
-        

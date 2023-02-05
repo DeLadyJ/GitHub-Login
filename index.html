@@ -15,10 +15,15 @@
             border: none;
         }
         .form-mid {
-            border-style: solid;
+            border-style: none;
             border-color: whitesmoke;
             border-radius: 5%;
             border-width: 2px;
+            padding-top: 10px;
+            padding: 15px;
+            background-color: whitesmoke;
+            margin-right: 10px;
+            
         }
         .img {
             display: block;
@@ -29,26 +34,41 @@
             text-align: center;
         }
         .git-heading {
-            padding: 20px;
+            display: block;
+            justify-content: center;
         }
         input {
-            width: 90%;
+            width: 85%;
             margin: 10px;
             border-radius: 5px;
+            height: 25px;
+            margin-right:20px;
+        }
+        .user {
+            padding-right: 15px;
         }
         .user-name {
-            padding-left: 10%;
+            padding-left: 5%;
         }
-        .submit {
-            background-color: darkolivegreen;
+        .password {
+            padding-left: 5%;
+        }
+        .input-password {
+            padding-right: 15px;
+        }
+        button {
+            background-color: rgba(97, 145, 14, 0.925);
             color: white;
+            height: 30px;
+            margin-left: 5%;
+            width: 90%;
+            border-radius: 5px;
+            padding: 0% 10%; 
         }
         .p-info {
             display: flex;
-            padding-left: 10%;
+            /* padding-left: 5%; */
             justify-content: space-between;
-           
-            
         }
         .input-info {
             display: flex;
@@ -57,23 +77,26 @@
             border-width: 2px;border-color: whitesmoke;
             border-radius: 5px;
             margin-top: 10px;
-            margin-bottom: 20px;
-
+            width: 90%;
+            padding-right: 15px;
         }
         a {
             text-decoration: none;
-            display: inline-flex;
-            justify-items: space-around;
-        }
-        .footer-info {
+            /* display: flex; */
+            
+        }  
+        footer {
             display: flex;
-        }
-        .privacy {
-            color: dodgerblue;
+            justify-content: space-between;
+            margin-top: 40px;
         }
         .contact {
             color: black;
         }
+        .privacy {
+            color: dodgerblue;
+        }
+       
        
     </style>
 </head>
@@ -82,32 +105,33 @@
         <img src="https://github.githubassets.com/pinned-octocat.svg" alt="githib logo" id="logo" class="img">
     
             <h1 class="git-heading">Sign in to GitHub</h1>
-        <form id="form" name="validate" class="form-validate">
+        <form action="/action_page.php" method="post" name="validate" class="form-validate">
             <main class="form-mid">
                 <label for="username" class="user-name">Username or email address</label>
-                <input type="text" id="user-name" class="user"> 
-                <div id="password-info" class="p-info">   
-                <label for="password">Password</label>
-                <label for="forgot password">Forget password</label>
+                <input type="text" class="user"> 
+                <div class="p-info">   
+                <label for="password" class="password">Password</label>
+                <label for="forgot password">Forget password?</label>
                 </div>
-                <input type="password" id="password" class="password">
-                <input type="submit" id="button" value="Sign in" class="submit">
+                <input type="password" class="input-password">
+                <button class="button" type="submit">Sign in</button>
+                <!-- <input type="submit" id="button" value="Sign in" class="submit"> -->
             </main>
         </form>
             <section>
-                <div id="input-info" class="input-info">
-                    <p>New to GtiHub?</p>
-                    <p>Creae an account.</p>
+                <div class="input-info">
+                    <p class="acct-new">New to GtiHub?</p>
+                    <p class="create-new">Create an account.</p>
                 </div>
             </section>
         
-            <footer id="nav" class="footer-info">
-                <div id="privacy" class="">
+            <footer>
+                <div class="privacy">
                     <a href="">Terms</a>
                     <a href="">Privacy</a>
                     <a href="">Security</a>
                 </div>    
-                <div id="contact" class="contact">
+                <div class="contact">
                     <a href="">Contact GtiHub?</a>
                 </div>
             </footer>
